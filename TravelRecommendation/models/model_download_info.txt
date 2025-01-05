@@ -1,0 +1,3 @@
+fine_tuned_kogpt2-20250105T073842Z-001.zip
+
+https://drive.google.com/drive/folders/1pvRhvVhqDBh1TpOignQm80QaTGxtlt-L
