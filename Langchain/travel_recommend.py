@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1TAiTq8eEPeA-FoziUPAWxoSknB-GGY5K
 """
 
-pip install openai langchain langchain-openai streamlit
+# pip install openai langchain langchain-openai streamlit
 
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
