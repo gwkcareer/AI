@@ -33,8 +33,10 @@ template = """
 
 prompt = PromptTemplate(template=template, input_variables=["user_input"])
 llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo", openai_api_key=api_key)
-chain = LLMChain(llm=llm, prompt=prompt)
 
+# ✅ 최신 방식: LLMChain 없이 직접 연결
+#chain = LLMChain(llm=llm, prompt=prompt)
+chain = prompt | llm
 
 # --- Streamlit UI ---
 st.title("🇰🇷 여행지 추천 챗봇")
