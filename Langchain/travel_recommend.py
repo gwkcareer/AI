@@ -8,6 +8,7 @@ Original file is located at
 """
 
 # pip install openai langchain langchain-openai streamlit
+import streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
@@ -36,7 +37,6 @@ chain = LLMChain(llm=llm, prompt=prompt)
 
 
 # --- Streamlit UI ---
-import streamlit as st
 st.title("🇰🇷 여행지 추천 챗봇")
 
 user_input = st.text_input("여행 조건을 입력해주세요 (예: 서울 근교 자연 여행지, 봄 당일치기 등)")
