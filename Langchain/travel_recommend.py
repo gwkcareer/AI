@@ -8,10 +8,9 @@ Original file is located at
 """
 
 # pip install openai langchain langchain-openai streamlit
-
-from langchain.chat_models import ChatOpenAI  # 여기만 수정
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+from langchain_openai import ChatOpenAI  
 
 # OpenAI API 키 설정(colab)
 # from google.colab import userdata
