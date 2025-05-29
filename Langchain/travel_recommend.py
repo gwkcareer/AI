@@ -45,7 +45,9 @@ user_input = st.text_input("여행 조건을 입력해주세요 (예: 서울 근
 
 if st.button("추천받기") and user_input:
     with st.spinner("추천 중입니다..."):
-        result = chain.run({"user_input": user_input})
+         # ⛔️ run() ❌ → ✅ invoke() 사용
+         # result = chain.run({"user_input": user_input})
+        result = chain.invoke({"user_input": user_input})
         st.success("추천 완료!")
         st.text_area("추천 결과", result, height=200)
 
