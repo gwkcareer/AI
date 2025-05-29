@@ -49,7 +49,14 @@ if st.button("추천받기") and user_input:
          # result = chain.run({"user_input": user_input})
         result = chain.invoke({"user_input": user_input})
         st.success("추천 완료!")
-        st.text_area("추천 결과", result, height=200)
+       
+        
+        #st.text_area("추천 결과", result, height=200)         # ❌ -> 객체 전체가 찍힘
+        #st.text_area("추천 결과", result.content, height=200)  # ✅ 깔끔하게 출력
 
+        # 줄바꿈 처리해서 예쁘게 표시
+        formatted_result = result.content.replace("\n", "  \n")
+        st.markdown(formatted_result)
+        
 # response = chain.run({"user_input": "서울에서 당일치기 가능한 자연 여행지 추천해줘"})
 # print(response)
